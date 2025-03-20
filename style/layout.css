@@ -9,6 +9,8 @@ main {
   overflow: auto;
   padding: 4rem;
 
+  
+
   & .main-container {
     max-width: 33rem;
     margin-left: auto;
@@ -17,7 +19,7 @@ main {
 
   & .back {
     display: flex;
-    gap: .5 rem;
+    gap: .5rem;
     margin-bottom: 1.5rem;
 
 
