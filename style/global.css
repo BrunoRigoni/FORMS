@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-
-}
-
 :root {
 /*font*/
 --font-family: "Poppins", sans-serif;
@@ -33,3 +29,7 @@ body {
 
 
 } 
+
+body {
+  overflow: hidden;
+  }
