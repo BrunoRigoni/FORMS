@@ -16,10 +16,9 @@ button {
     &:focus {
     background-color: #f3541c ;
     }
-  }
+  } 
 
   &.btn-secondary {
-    margin-left: auto;
     border: 1px solid var(--text-highlight);
 
     &:hover,
@@ -28,4 +27,11 @@ button {
       outline: .25rem solid var(--surface-secondary);
     }
   }
+}
+
+@media (width >=80em) {
+  & .btn-secondary {
+    margin-left: auto;
+  }
+
 }

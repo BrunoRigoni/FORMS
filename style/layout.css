@@ -1,47 +1,57 @@
-#app {
-  display: grid;
-  grid-template-columns: 51.25% 48.75%;
+.app {
+  --max-width: 20em;
+  width: max(var(--max-width), 100%);
+
   height: 100vh;
-  overflow: hidden;
+  --max-width: 20rem;
+  width: min(--max-width), 100%;
+  display: flex;
+  flex-direction: column-reverse;
+
+  overflow: auto;
 }
 
+
 main {
-  overflow: auto;
-  padding: 4rem;
-
-  
-
+  padding: 1.5rem;
   & .main-container {
     max-width: 33rem;
-    margin-left: auto;
+    margin: auto;
 
   }
-
   & .back {
     display: flex;
     gap: .5rem;
     margin-bottom: 1.5rem;
 
-
   }
-
   & .h1 {
     font: 600 1.5rem/1.25 var(--font-family);
     margin-bottom: .5rem;
   }
 
 }
-
 aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--surface-secondary);
-  padding: 4rem;
+  padding: 1.5rem;
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > img {
+    margin-top: .75rem;
+  }
 
   & .aside-container {
     max-width: 31rem;
-
-    & > img {
-      margin-top: 2rem;
-    }
 
   }
 
@@ -53,4 +63,40 @@ aside {
 
 h2 span {
   color: var(--text-highlight);
+}
+
+@media (width >=80em) {
+
+  & .app {
+    --max-width: 80em;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+
+ & main {
+  overflow: auto;
+  padding: 4rem;
+ }
+
+& aside {
+
+
+  padding: 4rem;
+  & header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:flex-start;
+
+  }
+
+  & > img {
+    margin-top: 2rem;
+  }
+}
+
 }

@@ -50,7 +50,12 @@ select {
 }
 
 .address .flex {
-gap: 1.25rem;
+  gap: 1.25rem;
+
+ & .input-wrapper {
+  flex-direction: column;
+ }
+
 }
 
 .input-wrapper:has([disabled]) {
@@ -90,4 +95,18 @@ input {
   &:not(:focus) + .error {
     display: none;
   }
+}
+
+@media (width >= 80em) {
+  .address {
+    gap: 1.25rem;
+
+    & .flex { 
+      & .input-wrapper {
+        flex-direction: row;
+       }
+    }
+  
+  }
+
 }
